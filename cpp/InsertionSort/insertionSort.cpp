@@ -2,6 +2,12 @@
 
 
 void insertionSort(int *array, unsigned int len) {
+	for (int i = 1; i<len; ++i) {
+		for (int j = i; j>0 && array[j-1]>array[j]; --j) {
+			std::swap(array[j-1], array[j]);
+		}
+	}
+}
 
 void printArray(int *array, unsigned int len) {
 	for (int i = 0; i<len; ++i) {
